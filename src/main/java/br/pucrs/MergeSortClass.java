@@ -14,8 +14,9 @@ public class MergeSortClass
             arr1[i] = rn.nextInt();
         }
         interations = 0;
-
+        long start = System.currentTimeMillis();
         arr1 = mergeSort(arr1);
+        long end = System.currentTimeMillis();
         boolean verify = true;
         for (int i = 0; i < arr1.length-1; i++) {
             if(arr1[i] > arr1[i+1]){
@@ -24,7 +25,7 @@ public class MergeSortClass
             }
         }
 
-        System.out.printf("Sort bem sucedido: %b\nIterações: %d\n", verify, interations);
+        System.out.printf("Sort bem sucedido: %b\nIterações: %d\nTempo: %d\n", verify, interations, end-start);
 
         int[] arr2 = new int[2048];
         
@@ -32,8 +33,9 @@ public class MergeSortClass
             arr2[i] = rn.nextInt();
         }
         interations = 0;
-
+        start = System.currentTimeMillis();
         arr2 = mergeSort(arr2);
+        end = System.currentTimeMillis();
         verify = true;
         for (int i = 0; i < arr2.length-1; i++) {
             if(arr2[i] > arr2[i+1]){
@@ -42,15 +44,16 @@ public class MergeSortClass
             }
         }
 
-        System.out.printf("Sort bem sucedido: %b\nIterações: %d\n", verify, interations);
+        System.out.printf("Sort bem sucedido: %b\nIterações: %d\nTempo: %d\n", verify, interations, end-start);
 
         int[] arr3 = new int[1048576];
          for (int i = 0; i < arr3.length; i++) {
             arr3[i] = rn.nextInt();
         }
         interations = 0;
-
+        start = System.currentTimeMillis();
         arr3 = mergeSort(arr3);
+        end = System.currentTimeMillis();
         verify = true;
         for (int i = 0; i < arr3.length-1; i++) {
             if(arr3[i] > arr3[i+1]){
@@ -59,7 +62,7 @@ public class MergeSortClass
             }
         }
 
-        System.out.printf("Sort bem sucedido: %b\nIterações: %d\n", verify, interations);
+        System.out.printf("Sort bem sucedido: %b\nIterações: %d\nTempo: %d\n", verify, interations, end-start);
     }
 
     public static int[] mergeSort(int[] list) throws Exception{

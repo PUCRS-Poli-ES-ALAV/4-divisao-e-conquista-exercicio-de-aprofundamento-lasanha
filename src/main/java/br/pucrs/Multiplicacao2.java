@@ -40,6 +40,7 @@ public class Multiplicacao2{
      }
      
     public static long soma(long a, long b) {
+        it++;
         if (b == 0) {
             return a;
         }
